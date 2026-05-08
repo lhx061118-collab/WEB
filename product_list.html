@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#abaf8e",
+                    "primary": "#7d562d",
+                    "outline-variant": "#d4c4b7",
+                    "tertiary-fixed": "#e1e6c2",
+                    "on-surface": "#2d1600",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#f0bd8b",
+                    "background": "#fff8f5",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#ffdcbd",
+                    "surface-tint": "#7d562d",
+                    "on-primary-container": "#5b3912",
+                    "tertiary-fixed-dim": "#c5c9a7",
+                    "secondary": "#665e45",
+                    "inverse-surface": "#4a2800",
+                    "surface-container-highest": "#ffdcbe",
+                    "secondary-fixed": "#eee2c2",
+                    "primary-container": "#d4a373",
+                    "surface-dim": "#ffd2a9",
+                    "on-tertiary-fixed-variant": "#45492f",
+                    "outline": "#82756a",
+                    "on-background": "#2d1600",
+                    "on-secondary-fixed-variant": "#4e462f",
+                    "on-primary-fixed": "#2c1600",
+                    "surface-container-low": "#fff1e7",
+                    "surface-variant": "#ffdcbe",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#d2c6a7",
+                    "surface-container": "#ffeada",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#eee2c2",
+                    "surface-container-high": "#ffe3cc",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#3e4229",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#50453b",
+                    "surface": "#fff8f5",
+                    "on-secondary-fixed": "#211b08",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#f0bd8b",
+                    "inverse-on-surface": "#ffeee1",
+                    "surface-bright": "#fff8f5",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#623f18",
+                    "on-secondary-container": "#6d644b",
+                    "tertiary": "#5c6145",
+                    "on-tertiary-fixed": "#1a1d07"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "16px",
+                    "xl": "24px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-edge": "32px",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "container-max-width": "1200px"
+            },
+            "fontFamily": {
+                    "h3": ["Libre Caslon Text"],
+                    "h2": ["Libre Caslon Text"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "h1": ["Libre Caslon Text"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "h3": ["28px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "h2": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f5;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface/90 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.15)] h-20">
+<div class="flex justify-between items-center px-margin-edge py-4 w-full h-full max-w-container-max-width mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-primary hover:scale-[1.02] transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined text-[28px]" data-icon="menu">menu</span>
+</button>
+<h1 class="font-h2 text-h2 text-primary tracking-tight">手工麵包坊</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="font-h3 text-h3 text-primary font-bold" href="home.html">首頁</a>
+<a class="font-h3 text-h3 text-on-surface-variant hover:text-primary transition-colors" href="product_list.html">精選系列</a>
+<a class="font-h3 text-h3 text-on-surface-variant hover:text-primary transition-colors" href="#">門市資訊</a>
+</nav>
+<button class="text-primary hover:scale-[1.02] transition-all duration-300 active:scale-95 relative p-2">
+<span class="material-symbols-outlined text-[28px]" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-error text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Header -->
+<section class="px-margin-edge py-section-padding flex flex-col items-center text-center max-w-container-max-width mx-auto">
+<div class="mb-4 inline-block">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] border-b-2 border-primary-container pb-1">Fresh Breads</span>
+</div>
+<h2 class="font-h1 text-h1 text-on-surface mb-6">新鮮麵包</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">每日清晨現做，我們堅持選用日本頂級麵粉與法國發酵奶油，透過低溫長時發酵，將大自然的麥香完美封存。每一口都能感受到職人手心的溫度。</p>
+</section>
+<!-- Category Filter -->
+<section class="px-margin-edge mb-12 max-w-container-max-width mx-auto">
+<div class="flex items-center gap-4 overflow-x-auto pb-4 no-scrollbar">
+<button class="whitespace-nowrap px-8 py-3 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow-sm hover:scale-[1.02] transition-all">全部</button>
+<button class="whitespace-nowrap px-8 py-3 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30 hover:bg-primary-container/20 hover:text-primary transition-all">歐式麵包</button>
+<button class="whitespace-nowrap px-8 py-3 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30 hover:bg-primary-container/20 hover:text-primary transition-all">吐司</button>
+<button class="whitespace-nowrap px-8 py-3 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30 hover:bg-primary-container/20 hover:text-primary transition-all">甜點</button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-margin-edge pb-section-padding max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product 1: Baguette -->
+<div class="group bg-surface-container-low rounded-xl p-4 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.1) hover:shadow-[0_8px_30px_-10px_rgba(96,56,8,0.15)] transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional food photograph of a fresh French baguette resting on a rustic wooden table with scattered flour. The lighting is warm and golden, highlighting the crispy, golden-brown crust and textured flour dusting. The atmosphere is cozy and artisanal, emphasizing a high-end bakery aesthetic with soft shadows and rich earthy tones of light wood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKziSXdqRb0cGbBznma6UsnWeqzDwJ5X8rmF7YC-JLtu5QcSFoVCQvHYRpP5OxHvavn7Z5tl767nm-IQPUg4RsdjS-czAiOnAoq7G6odrjV1aM57sqS96E3yIjm3_lpADLrH5bnItBK7hExaH9AQHOl5m7S6kzc7vCjPnnzMikTygx8Gk0RFgpXFjDb1gi2Z9DvM89tVKAoX5xN2TYxkcLlHPFhsR1SAfHdOX22vOOquvvqgJ2N-t68JZ1R6k6StCQNAIIbZKVpHlH"/>
+<span class="absolute top-4 left-4 bg-tertiary text-on-tertiary font-label-sm text-[12px] px-3 py-1 rounded-full shadow-sm">外酥內軟</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface">法式長棍</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">正統法式工法，外皮薄脆帶有強烈麥香，內部孔洞大且富有彈性。</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-h3 text-h3 text-primary font-bold">$80</span>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-5 py-2.5 rounded-lg hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                加入購物車
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product 2: Signature Shokupan -->
+<div class="group bg-surface-container-low rounded-xl p-4 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(96,56,8,0.15)] transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6 cursor-pointer" onclick="location.href='product_details.html'">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up high-quality shot of a sliced signature Shokupan milk bread, showing its incredibly soft and fluffy interior texture. The lighting is bright and airy, suggesting a morning bakery scene. The background features warm cream tones and subtle wooden textures, reflecting a premium, handcrafted Japanese bakery style with natural lighting and a clean layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_dFrwuPcE9qHlnh2uxFbUd9TZGaDJxQbc__62FwU1sme0ZyUhFmG2NE6kKzwa7c4bT1T84vGPESJwpt_iaQsRdDgEv4gHGjKM-63GskKvJHIIzOvd0h6MIVyTxxtzndoImjHVVABSNbKtToselWkyA6VzMv-ha_PWMM9nYt22iBdy96uXGkbbHzTTZVXwfFIwa4ciGCL5dDE2r7-1qdrLV_JllYs0BSR3X75piLY48RZpAs1WMw6JgrkcYrVWKxvtwQLUppWEhcnW"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary font-label-sm text-[12px] px-3 py-1 rounded-full shadow-sm">人氣推薦</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface">招牌生吐司</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">加入頂級鮮奶油與蜂蜜，質地如雲朵般輕盈柔嫩，手撕最能品嚐美味。</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-h3 text-h3 text-primary font-bold">$150</span>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-5 py-2.5 rounded-lg hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                加入購物車
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product 3: Croissant -->
+<div class="group bg-surface-container-low rounded-xl p-4 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(96,56,8,0.15)] transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Golden-brown butter croissants stacked elegantly on a ceramic white plate. The lighting is high-key and soft, illuminating the delicate, flaky layers of the pastry. The scene is set in a minimalist, bright bakery environment with a warm off-white background and subtle earthy brown accents, creating a high-end sensory experience of artisanal quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCauaWHn_m_u8ib0v2pBlGo6DZDXjIw0BbN30ijNVBIzxKtr3NVo72927De-YdH0Zgs_wA0YaBK39aCOqp66J-McShUPDU3bUL2ygtFU4PvIuTuh39ScijKm5qGqapE3fEKnwBwNFvO59JTMZVoD_qUndfYW25sK8BCz-dN4xky92RrRemnTS3MDylBeACwv51kw3kBGmOUkJ164IhSR2pRP8Thi0wFV9416iJl5Guz_4EWtARC25agWOhvzVfelsltHzxrqds7yOOY"/>
+<span class="absolute top-4 left-4 bg-tertiary text-on-tertiary font-label-sm text-[12px] px-3 py-1 rounded-full shadow-sm">層次分明</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface">奶油可頌</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">使用法國 AOP 認證奶油，多達16層的折疊工法，酥脆與奶香的和諧共舞。</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-h3 text-h3 text-primary font-bold">$65</span>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-5 py-2.5 rounded-lg hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                加入購物車
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product 4: Cinnamon Roll -->
+<div class="group bg-surface-container-low rounded-xl p-4 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.1)] hover:shadow-[0_8_30px_-10px_rgba(96,56,8,0.15)] transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A decadent cinnamon roll drizzled with glossy cream cheese icing, sitting on a piece of parchment paper. The warm brown tones of the cinnamon swirl contrast beautifully with the creamy white icing. The mood is rich and indulgent, captured with a shallow depth of field in a warm-lit, artisanal kitchen setting using a palette of wheat gold and earth brown." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbxR_UVJ3Url6EVOYz2E9LgQ-0af-J6WXXHkgJ5kt36iHfPbTB1iCNNPv2V8NeoMZX3dfwVTA8Sh8JuY72ZWuocsS8dADtERiOJwWZzQcqcQUmYaHOtZanwIgSC17kv7gi_cohlHciLGccOPq_Ic1VvMfO2WsP_EUXVXCP8sEhlA95wMfqMByFuK4GXaMFSnmTkpBUihTR2hQknrqsd1gB-2XBuONXWHzE8UbfxZ39g_g1RHWA1-zAGaRRrTCnRbOp5fq9XjpGY4mX"/>
+<span class="absolute top-4 left-4 bg-tertiary text-on-tertiary font-label-sm text-[12px] px-3 py-1 rounded-full shadow-sm">辛香甜蜜</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface">肉桂捲</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">濃郁肉桂香氣伴隨醇厚核桃，淋上輕盈乳酪糖霜，午茶時光的最佳首選。</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-h3 text-h3 text-primary font-bold">$90</span>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-5 py-2.5 rounded-lg hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                加入購物車
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product 5: Walnut Bread -->
+<div class="group bg-surface-container-low rounded-xl p-4 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(96,56,8,0.15)] transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A large, rustic loaf of walnut country bread sliced to reveal the generous inclusion of toasted nuts. The bread sits on a dark wooden board surrounded by whole walnuts. The lighting is dramatic and warm, emphasizing the earthy textures of the crust and the artisanal quality of the bake, set against a cozy, high-end bakery background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs05qflE_ZYJdSUezaLUaBOd8ZvqId4nfd1xilfwJJgygZ0bPPl_6DmMNV45ou65xSV4OnYRu9AXi6NQoOXAKcQjxWVfvCt5QOFP8ulYRs8gHDoFW6nCcMpofh0psPgt-oeiKclxXWLDgwaNZ2Ag5lGOIclB5QPwt2SNTdCDa7TbDFaSNr8tW-hx8wok3INX9qRqbC_l2_Z2areUbEIHRiQZbgWSObQ1xRhRRoH5goWG0WAv2dEO1G1fqUU6w_EdKfTqA4FDnQUGA_"/>
+<span class="absolute top-4 left-4 bg-tertiary text-on-tertiary font-label-sm text-[12px] px-3 py-1 rounded-full shadow-sm">養生堅果</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface">核桃鄉村麵包</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">天然酵母發酵，加入低溫烘焙核桃，口感紮實，越嚼越能品嚐穀物甘甜。</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-h3 text-h3 text-primary font-bold">$120</span>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-5 py-2.5 rounded-lg hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                加入購物車
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product 6: Mentaiko French -->
+<div class="group bg-surface-container-low rounded-xl p-4 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(96,56,8,0.15)] transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A split French bread filled with vibrant pink Mentaiko roe spread, grilled to a golden finish. The light catches the glistening roe, creating a mouth-watering visual. The styling is modern-rustic, featuring light wood surfaces and a clean, minimalist layout that highlights the handcrafted details of this savory artisanal bread." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCesh_i7Fdyy8ELkAgk6o3PGqzfgDMUm2BF3ez0X8d8Ujf32k1c857ul3Q2_7Y0OkVuiOrZxMbkuYX3fFs2wscMzcgDSE6dl0ACcbAtH5eXq8eIy4AxNUo_vwCXCaOaoKGvfSaPN67AAnEhzdZHOdniTad59c4r7ZtSklsmxN15BBsdMgH_k3r33Q-vdU28EUWCQSjhCT0YJkv0zHXO1oRL3IqBPDBTtK6K1mauQNSaptC6z32Z3lCYPlaA6Awz3vxAdvp6Ic3deQ8p"/>
+<span class="absolute top-4 left-4 bg-tertiary text-on-tertiary font-label-sm text-[12px] px-3 py-1 rounded-full shadow-sm">鹹香滋味</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-h3 text-h3 text-on-surface">明太子法國</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">特調明太子醬料滿載，鹹鮮滋味滲透進酥脆法國麵包中，絕妙滋味令人難忘。</p>
+<div class="flex justify-between items-center mt-4">
+<span class="font-h3 text-h3 text-primary font-bold">$85</span>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-5 py-2.5 rounded-lg hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                加入購物車
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full border-t border-outline-variant/10">
+<div class="w-full px-margin-edge py-section-padding flex flex-col gap-unit max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div class="flex flex-col gap-4">
+<h3 class="font-h3 text-h3 text-primary">手工麵包坊</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">我們致力於尋找最純粹的食材，透過時間與職人的雙手，為您呈現每一顆帶有靈魂的麵包。</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">聯絡資訊</span>
+<ul class="flex flex-col gap-2">
+<li class="font-body-md text-body-md text-on-surface-variant">聯絡電話: 02-2345-6789</li>
+<li class="font-body-md text-body-md text-on-surface-variant">地址: 台北市信義區暖心街1號</li>
+<li class="font-body-md text-body-md text-on-surface-variant">營業時間: 08:00 - 20:00</li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">快速連結</span>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">配送服務</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">常見問題</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">會員中心</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">訂閱我們</span>
+<div class="flex">
+<input class="bg-surface border border-outline-variant/30 rounded-l-lg px-4 py-2 w-full focus:ring-1 focus:ring-primary-container focus:border-primary-container outline-none font-body-md" placeholder="您的電子郵件" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-r-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2024 手工麵包坊. 溫暖手作，旬味呈現.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

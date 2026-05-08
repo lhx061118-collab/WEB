@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#623f18",
+                        "on-surface-variant": "#50453b",
+                        "on-tertiary-container": "#3e4229",
+                        "surface-container-low": "#fff1e7",
+                        "on-tertiary-fixed": "#1a1d07",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#45492f",
+                        "secondary-container": "#eee2c2",
+                        "secondary": "#665e45",
+                        "tertiary-fixed": "#e1e6c2",
+                        "surface-bright": "#fff8f5",
+                        "primary-fixed-dim": "#f0bd8b",
+                        "on-secondary-fixed-variant": "#4e462f",
+                        "inverse-primary": "#f0bd8b",
+                        "outline-variant": "#d4c4b7",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#6d644b",
+                        "surface-tint": "#7d562d",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#2d1600",
+                        "on-primary": "#ffffff",
+                        "on-background": "#2d1600",
+                        "inverse-surface": "#4a2800",
+                        "tertiary-container": "#abaf8e",
+                        "primary": "#7d562d",
+                        "tertiary-fixed-dim": "#c5c9a7",
+                        "surface-container-high": "#ffe3cc",
+                        "surface-variant": "#ffdcbe",
+                        "on-error-container": "#93000a",
+                        "background": "#fff8f5",
+                        "inverse-on-surface": "#ffeee1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#ffeada",
+                        "on-primary-fixed": "#2c1600",
+                        "outline": "#82756a",
+                        "surface": "#fff8f5",
+                        "primary-fixed": "#ffdcbd",
+                        "on-secondary-fixed": "#211b08",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#ffd2a9",
+                        "secondary-fixed": "#eee2c2",
+                        "on-primary-container": "#5b3912",
+                        "primary-container": "#d4a373",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#ffdcbe",
+                        "secondary-fixed-dim": "#d2c6a7",
+                        "tertiary": "#5c6145"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-edge": "32px",
+                        "unit": "8px",
+                        "section-padding": "80px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Libre Caslon Text"],
+                        "h1": ["Libre Caslon Text"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "h3": ["Libre Caslon Text"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "h2": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["28px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f5;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface/90 dark:bg-on-surface/90 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0_4px_20px_-10px_rgba(96,56,8,0.15)] flex justify-between items-center px-margin-edge py-4 w-full h-20">
+<div class="flex items-center gap-4">
+<button class="text-primary hover:scale-[1.02] transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-h2 text-h2 text-primary dark:text-primary-fixed tracking-tight cursor-pointer" onclick="location.href='home.html'">手工麵包坊</h1>
+</div>
+<div class="flex items-center">
+<button class="text-primary hover:scale-[1.02] transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section & Product Core -->
+<section class="max-w-container-max-width mx-auto px-margin-edge py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<!-- Product Image (Bento-style focus) -->
+<div class="md:col-span-7 rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(96,56,8,0.1)] bg-surface-container-low">
+<img alt="招牌生吐司" class="w-full h-auto aspect-[4/5] object-cover" data-alt="A close-up high-resolution photograph of a freshly sliced signature Japanese shokupan milk bread. The bread has an incredible, cloud-like soft texture with a pale golden crust and a snowy white interior. The lighting is warm and natural, coming from a side window, highlighting the delicate steam rising from the loaf. The scene is set on a rustic wooden table in an artisanal bakery environment, using a warm color palette of cream and wheat gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-rll3mZjflOjQoJvK5ido6CqgO542weijP6QzrQjfRCDrMLpOvOQ1LukowyBimdrmhz9NZcvdFH3Broj-TY8CBPf7fjr8ex_aYJ-ZGYHL_BlXcp7LXJyQW24hcHtBgNJ0nw8hHmVq7QmNoe1_akS5ybnM8Ixtw3mNw7cNTg5ULOOWHq2d67yyIGiCzu4u_vBWQQ3Bw_Sa2jvn9RVzjrI3b87zvYiVPW8iFNaqU4pxQd2ms51zSwqDO-MtDy6zfqMGGKq5PPVRMeKP"/>
+</div>
+<!-- Product Content -->
+<div class="md:col-span-5 flex flex-col gap-6 sticky top-28">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-primary tracking-widest">ARTISAN SELECTION</span>
+<h2 class="font-h1 text-h1 text-on-surface">招牌生吐司</h2>
+<p class="font-h3 text-h3 text-primary">NT$ 150</p>
+</div>
+<div class="h-px bg-outline-variant/30 w-full"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        使用日本頂級麵粉與北海道生乳，經過長時間低溫發酵，口感如雲朵般柔軟綿密，散發自然奶香。每一口都是職人手作的溫暖滋味。
+                    </p>
+<!-- Interaction Controls -->
+<div class="flex flex-col gap-4 mt-4">
+<div class="flex items-center justify-between bg-surface-container px-6 py-4 rounded-lg">
+<span class="font-label-sm text-on-surface-variant">數量選擇</span>
+<div class="flex items-center gap-6">
+<button class="w-8 h-8 flex items-center justify-center rounded-full border border-outline text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="remove">remove</span>
+</button>
+<span class="font-h3 text-on-surface min-w-[20px] text-center">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full border border-outline text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-sm py-5 rounded-lg shadow-sm hover:scale-[1.02] active:scale-95 transition-all">
+                                加入購物車
+                            </button>
+<button class="bg-primary text-on-primary font-label-sm py-5 rounded-lg shadow-sm hover:scale-[1.02] active:scale-95 transition-all">
+                                立即購買
+                            </button>
+</div>
+</div>
+<!-- Ingredients Tags -->
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="bg-tertiary-container/30 text-on-tertiary-container px-3 py-1 rounded-full font-label-sm">日本頂級麵粉</span>
+<span class="bg-tertiary-container/30 text-on-tertiary-container px-3 py-1 rounded-full font-label-sm">北海道生乳</span>
+<span class="bg-tertiary-container/30 text-on-tertiary-container px-3 py-1 rounded-full font-label-sm">天然酵母</span>
+<span class="bg-tertiary-container/30 text-on-tertiary-container px-3 py-1 rounded-full font-label-sm">法國發酵奶油</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Specifications -->
+<section class="bg-surface-container-low py-section-padding">
+<div class="max-w-container-max-width mx-auto px-margin-edge">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Storage info -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="inventory_2">inventory_2</span>
+<h3 class="font-h2 text-h2 text-on-surface">保存方式</h3>
+</div>
+<div class="bg-white/50 p-8 rounded-xl border border-outline-variant/20 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-primary">常溫保存</span>
+<p class="text-on-surface-variant">請於陰涼乾燥處存放，建議於 2 日內食用完畢以維持最佳風味。</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-primary">冷凍保存</span>
+<p class="text-on-surface-variant">若不克於兩日內食用完畢，建議切片後密封冷凍，可保存 7-10 日。食用前噴少許水回烤即可恢復柔軟。</p>
+</div>
+</div>
+</div>
+<!-- Allergen info -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="warning">warning</span>
+<h3 class="font-h2 text-h2 text-on-surface">過敏原資訊</h3>
+</div>
+<div class="bg-white/50 p-8 rounded-xl border border-outline-variant/20">
+<ul class="flex flex-col gap-4 list-disc list-inside text-on-surface-variant">
+<li>本產品含有麩質之穀物（小麥）</li>
+<li>本產品含有乳製品（生乳、奶油）</li>
+<li>生產線亦處理含有堅果、蛋、大豆之產品，不適合對其過敏體質者食用。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Story (Brand Moment) -->
+<section class="max-w-container-max-width mx-auto px-margin-edge py-section-padding">
+<div class="relative rounded-xl overflow-hidden h-[400px]">
+<img alt="Bakery Process" class="w-full h-full object-cover" data-alt="An atmospheric, cinematic shot of a baker's flour-dusted hands gently kneading soft dough on a flour-covered wooden surface. The background is softly blurred, showing a warm, artisanal kitchen with copper pots and vintage baking tools. The lighting is low and dramatic, focusing on the texture of the dough and the motion of the hands. The overall mood is quiet, respectful of the craft, and feels deeply authentic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsyPUwRsfRTQ-9lTw5Bzyr8VG9eTop7zLz3mfRF1ODymp-8l_mbLyzq9io3Qrl2gP7WnYXvqYr4iC2KMTkkAHujeb5MgoTLX6kpgJl5bSL9GnzOwnhIeyGx0Q0KD1bbCVqf2M5-_Cdyat4S9EcoZYbpO2Spr5ePAT9V1cfaHWQFo6x3N4XUvtX38vXYWdRhS2vhBUMMF5SrUtd6u0y4pbW6pRM1TfqUBD2SsrK3gL2uUviSkeGeDt2l_O8Aw3_J4llQpeBeAM5Gi63"/>
+<div class="absolute inset-0 bg-on-surface/40 flex items-center justify-center p-margin-edge">
+<div class="max-w-2xl text-center">
+<h4 class="font-h2 text-h2 text-white mb-4">職人手作的溫度</h4>
+<p class="font-body-lg text-white/90">我們堅持不使用化學添加物，每一顆麵糰都由師傅親手揉製。從麵粉的挑選到溫度的控管，只為了呈現最純粹的麥香與乳香。</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-highest w-full border-t border-outline-variant/10">
+<div class="w-full px-margin-edge py-section-padding flex flex-col gap-unit max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-8">
+<div>
+<h2 class="font-h3 text-h3 text-primary dark:text-primary-fixed mb-4">手工麵包坊</h2>
+<p class="font-body-md text-on-surface-variant max-w-sm">溫暖手作，旬味呈現。我們將大地的禮物轉化為手中的溫度。</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-body-md text-on-surface dark:text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span> 聯繫電話: 02-2345-6789
+                    </span>
+<span class="font-body-md text-on-surface dark:text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> 地址: 台北市信義區暖心街1號
+                    </span>
+<span class="font-body-md text-on-surface dark:text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 營業時間: 08:00 - 20:00
+                    </span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/20 w-full mb-6"></div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-on-surface-variant dark:text-outline-variant">© 2024 手工麵包坊. 溫暖手作，旬味呈現.</p>
+<div class="flex gap-6">
+<a class="font-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#">服務條款</a>
+<a class="font-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#">隱私政策</a>
+<a class="font-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-200" href="#">運送政策</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
